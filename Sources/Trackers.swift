@@ -2,15 +2,26 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-public func track<T: UIViewController>(type: T.Type, block: (T) -> Void) {
+var mapping: [String: (UIViewController) -> Void] = [:]
+
+public func track<T: UIViewController>(type: T.Type, block: @escaping (T) -> Void) {
   let original = #selector(UIViewController.viewDidAppear(_:))
   let swizled = #selector(UIViewController.trackers_viewDidAppear(_:))
   swizzle(type: type, originalSelector: original, swizzledSelector: swizled)
+
+  mapping[String(describing: type)] = { controller in
+    if let controller = controller as? T {
+      block(controller)
+    }
+  }
 }
 
 extension UIViewController {
   func trackers_viewDidAppear(_ animated: Bool) {
     trackers_viewDidAppear(animated)
+
+    let string = String(describing: type(of: self))
+    mapping[string]?(self)
   }
 }
 
