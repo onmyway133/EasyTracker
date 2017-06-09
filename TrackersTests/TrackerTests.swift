@@ -28,12 +28,9 @@ class TrackerTests: XCTestCase {
 
     let list = ListController()
     let detail = DetailController()
-    let navigation = UINavigationController(rootViewController: list)
-    navigation.pushViewController(detail, animated: false)
-
     list.viewDidAppear(true)
     detail.viewDidAppear(true)
 
-    XCTAssertEqual(strings, ["", ""])
+    XCTAssertEqual(strings, ["ListController", "DetailController"])
   }
 }
