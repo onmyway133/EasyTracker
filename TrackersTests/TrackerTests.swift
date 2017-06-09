@@ -5,11 +5,15 @@ import Trackers
 class TrackerTests: XCTestCase {
 
   class ListController: UIViewController {
-
+    override func viewDidAppear(_ animated: Bool) {
+      super.viewDidAppear(animated)
+    }
   }
 
   class DetailController: UIViewController {
-
+    override func viewDidAppear(_ animated: Bool) {
+      super.viewDidAppear(animated)
+    }
   }
 
   func testTrackers() {
@@ -26,6 +30,9 @@ class TrackerTests: XCTestCase {
     let detail = DetailController()
     let navigation = UINavigationController(rootViewController: list)
     navigation.pushViewController(detail, animated: false)
+
+    list.viewDidAppear(true)
+    detail.viewDidAppear(true)
 
     XCTAssertEqual(strings, ["", ""])
   }
