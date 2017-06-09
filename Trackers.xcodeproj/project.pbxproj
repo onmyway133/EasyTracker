@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D24F80A41DAE22C4008185FF /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80A31DAE22C4008185FF /* iOSTests.swift */; };
-		D24F80A81DAE2718008185FF /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80A71DAE2718008185FF /* SharedTests.swift */; };
-		D24F80A91DAE2718008185FF /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80A71DAE2718008185FF /* SharedTests.swift */; };
-		D24F80AB1DAE2727008185FF /* macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80AA1DAE2727008185FF /* macOSTests.swift */; };
 		D26C587C1EEACD060072E250 /* Trackers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C587B1EEACD060072E250 /* Trackers.swift */; };
 		D26C587D1EEACD060072E250 /* Trackers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C587B1EEACD060072E250 /* Trackers.swift */; };
 		D26C58811EEACDB70072E250 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26C587F1EEACDB70072E250 /* RxCocoa.framework */; };
 		D26C58821EEACDB70072E250 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26C58801EEACDB70072E250 /* RxSwift.framework */; };
 		D26C58851EEACDC10072E250 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26C58831EEACDC10072E250 /* RxCocoa.framework */; };
 		D26C58861EEACDC10072E250 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26C58841EEACDC10072E250 /* RxSwift.framework */; };
+		D26C588A1EEAD0190072E250 /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C58891EEAD0190072E250 /* TrackerTests.swift */; };
+		D26C588B1EEAD0190072E250 /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C58891EEAD0190072E250 /* TrackerTests.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Trackers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Trackers.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Trackers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Trackers.framework */; };
 /* End PBXBuildFile section */
@@ -39,14 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D24F80A31DAE22C4008185FF /* iOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSTests.swift; sourceTree = "<group>"; };
-		D24F80A71DAE2718008185FF /* SharedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
-		D24F80AA1DAE2727008185FF /* macOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = macOSTests.swift; sourceTree = "<group>"; };
 		D26C587B1EEACD060072E250 /* Trackers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trackers.swift; sourceTree = "<group>"; };
 		D26C587F1EEACDB70072E250 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		D26C58801EEACDB70072E250 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D26C58831EEACDC10072E250 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
 		D26C58841EEACDC10072E250 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		D26C58891EEAD0190072E250 /* TrackerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* Trackers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Trackers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,35 +150,9 @@
 			children = (
 				D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */,
 				D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */,
-				D5C629921C3A8BDA007F7B7C /* iOS */,
-				D5C629941C3A8BDA007F7B7C /* Mac */,
-				D5C629961C3A8BDA007F7B7C /* Shared */,
+				D26C58891EEAD0190072E250 /* TrackerTests.swift */,
 			);
 			path = TrackersTests;
-			sourceTree = "<group>";
-		};
-		D5C629921C3A8BDA007F7B7C /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D24F80A31DAE22C4008185FF /* iOSTests.swift */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
-		D5C629941C3A8BDA007F7B7C /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				D24F80AA1DAE2727008185FF /* macOSTests.swift */,
-			);
-			path = Mac;
-			sourceTree = "<group>";
-		};
-		D5C629961C3A8BDA007F7B7C /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				D24F80A71DAE2718008185FF /* SharedTests.swift */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,8 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D24F80A41DAE22C4008185FF /* iOSTests.swift in Sources */,
-				D24F80A81DAE2718008185FF /* SharedTests.swift in Sources */,
+				D26C588A1EEAD0190072E250 /* TrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,8 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D24F80AB1DAE2727008185FF /* macOSTests.swift in Sources */,
-				D24F80A91DAE2718008185FF /* SharedTests.swift in Sources */,
+				D26C588B1EEAD0190072E250 /* TrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
