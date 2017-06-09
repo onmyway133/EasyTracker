@@ -7,7 +7,7 @@ var mapping: [String: (UIViewController) -> Void] = [:]
 public func track<T: UIViewController>(_ type: T.Type, block: @escaping (T) -> Void) {
   let original = #selector(UIViewController.viewDidAppear(_:))
   let swizled = #selector(UIViewController.trackers_viewDidAppear(_:))
-  swizzle(kClass: type, originalSelector: original, swizzledSelector: swizled)
+  swizzle(kClass: UIViewController.self, originalSelector: original, swizzledSelector: swizled)
 
   mapping[String(describing: type)] = { controller in
     if let controller = controller as? T {
