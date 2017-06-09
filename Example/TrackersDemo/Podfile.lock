@@ -1,0 +1,16 @@
+PODS:
+  - Trackers (0.1.0)
+
+DEPENDENCIES:
+  - Trackers (from `../../`)
+
+EXTERNAL SOURCES:
+  Trackers:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  Trackers: e973f81acfb3ba83068c3aa5333c638cddb3c22c
+
+PODFILE CHECKSUM: cd0d16c978b98f8e2e1ae27b525057426b36085d
+
+COCOAPODS: 1.2.1
