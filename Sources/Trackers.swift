@@ -3,11 +3,16 @@ import RxSwift
 import RxCocoa
 
 var mapping: [String: (UIViewController) -> Void] = [:]
+var hasSwizzled = false
 
 public func track<T: UIViewController>(_ type: T.Type, block: @escaping (T) -> Void) {
   let original = #selector(UIViewController.viewDidAppear(_:))
   let swizled = #selector(UIViewController.trackers_viewDidAppear(_:))
-  swizzle(kClass: UIViewController.self, originalSelector: original, swizzledSelector: swizled)
+
+  if !hasSwizzled {
+    swizzle(kClass: UIViewController.self, originalSelector: original, swizzledSelector: swizled)
+    hasSwizzled = true
+  }
 
   mapping[String(describing: type)] = { controller in
     if let controller = controller as? T {
