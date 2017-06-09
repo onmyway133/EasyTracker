@@ -7,7 +7,7 @@ var mapping: [String: (UIViewController) -> Void] = [:]
 public func track<T: UIViewController>(_ type: T.Type, block: @escaping (T) -> Void) {
   let original = #selector(UIViewController.viewDidAppear(_:))
   let swizled = #selector(UIViewController.trackers_viewDidAppear(_:))
-  swizzle(type: type, originalSelector: original, swizzledSelector: swizled)
+  swizzle(kClass: type, originalSelector: original, swizzledSelector: swizled)
 
   mapping[String(describing: type)] = { controller in
     if let controller = controller as? T {
@@ -25,14 +25,14 @@ extension UIViewController {
   }
 }
 
-func swizzle<T: UIViewController>(type: T.Type, originalSelector: Selector, swizzledSelector: Selector) {
-  let originalMethod = class_getInstanceMethod(type, originalSelector)
-  let swizzledMethod = class_getInstanceMethod(type, swizzledSelector)
+func swizzle(kClass: AnyClass, originalSelector: Selector, swizzledSelector: Selector) {
+  let originalMethod = class_getInstanceMethod(kClass, originalSelector)
+  let swizzledMethod = class_getInstanceMethod(kClass, swizzledSelector)
 
-  let didAddMethod = class_addMethod(type, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
+  let didAddMethod = class_addMethod(kClass, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
 
   if didAddMethod {
-    class_replaceMethod(type, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod))
+    class_replaceMethod(kClass, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod))
   } else {
     method_exchangeImplementations(originalMethod, swizzledMethod)
   }
