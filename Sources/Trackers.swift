@@ -4,7 +4,7 @@ import RxCocoa
 
 var mapping: [String: (UIViewController) -> Void] = [:]
 
-public func track<T: UIViewController>(type: T.Type, block: @escaping (T) -> Void) {
+public func track<T: UIViewController>(_ type: T.Type, block: @escaping (T) -> Void) {
   let original = #selector(UIViewController.viewDidAppear(_:))
   let swizled = #selector(UIViewController.trackers_viewDidAppear(_:))
   swizzle(type: type, originalSelector: original, swizzledSelector: swizled)
