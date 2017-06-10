@@ -17,11 +17,15 @@ Simply call `track` at app launch
 
 ```swift
 track(ListController.self) {
-  // list controller has appeared
+  print("list controller has appeared")
 }
 
 track(DetailController.self) {
-  // detail controller has appeared
+  print("detail controller has appeared")
+}
+
+track(CouponController.self) { controller in
+	print("coupon controller has appeared with code \(controller.coupon.code)")
 }
 ```
 
