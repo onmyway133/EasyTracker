@@ -1,6 +1,4 @@
 import UIKit
-import RxSwift
-import RxCocoa
 
 var mapping: [String: (UIViewController) -> Void] = [:]
 var hasSwizzled = false
@@ -14,7 +12,7 @@ public func track<T: UIViewController>(_ type: T.Type, block: @escaping (T) -> V
     hasSwizzled = true
   }
 
-  mapping[String(describing: type)] = { controller in
+  mapping[NSStringFromClass(type)] = { controller in
     if let controller = controller as? T {
       block(controller)
     }
@@ -25,7 +23,7 @@ extension UIViewController {
   func trackers_viewDidAppear(_ animated: Bool) {
     trackers_viewDidAppear(animated)
 
-    let string = String(describing: type(of: self))
+    let string = NSStringFromClass(type(of: self))
     mapping[string]?(self)
   }
 }

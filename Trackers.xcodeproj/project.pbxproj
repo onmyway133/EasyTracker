@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		D26C587C1EEACD060072E250 /* Trackers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C587B1EEACD060072E250 /* Trackers.swift */; };
 		D26C587D1EEACD060072E250 /* Trackers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C587B1EEACD060072E250 /* Trackers.swift */; };
-		D26C58811EEACDB70072E250 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26C587F1EEACDB70072E250 /* RxCocoa.framework */; };
-		D26C58821EEACDB70072E250 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26C58801EEACDB70072E250 /* RxSwift.framework */; };
-		D26C58851EEACDC10072E250 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26C58831EEACDC10072E250 /* RxCocoa.framework */; };
-		D26C58861EEACDC10072E250 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26C58841EEACDC10072E250 /* RxSwift.framework */; };
 		D26C588A1EEAD0190072E250 /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C58891EEAD0190072E250 /* TrackerTests.swift */; };
 		D26C588B1EEAD0190072E250 /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C58891EEAD0190072E250 /* TrackerTests.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Trackers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Trackers.framework */; };
@@ -60,8 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D26C58811EEACDB70072E250 /* RxCocoa.framework in Frameworks */,
-				D26C58821EEACDB70072E250 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D26C58851EEACDC10072E250 /* RxCocoa.framework in Frameworks */,
-				D26C58861EEACDC10072E250 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +175,6 @@
 				D5B2E89B1C3A780C00C0327D /* Frameworks */,
 				D5B2E89C1C3A780C00C0327D /* Headers */,
 				D5B2E89D1C3A780C00C0327D /* Resources */,
-				D26C58881EEACDF50072E250 /* Copy with Carthage */,
 			);
 			buildRules = (
 			);
@@ -220,7 +211,6 @@
 				D5C6293C1C3A7FAA007F7B7C /* Frameworks */,
 				D5C6293D1C3A7FAA007F7B7C /* Headers */,
 				D5C6293E1C3A7FAA007F7B7C /* Resources */,
-				D26C58871EEACDE90072E250 /* Copy with Carthage */,
 			);
 			buildRules = (
 			);
@@ -325,41 +315,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D26C58871EEACDE90072E250 /* Copy with Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-			);
-			name = "Copy with Carthage";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		D26C58881EEACDF50072E250 /* Copy with Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-			);
-			name = "Copy with Carthage";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5B2E89A1C3A780C00C0327D /* Sources */ = {

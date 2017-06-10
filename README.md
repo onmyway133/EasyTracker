@@ -7,14 +7,22 @@
 [![Platform](https://img.shields.io/cocoapods/p/Trackers.svg?style=flat)](http://cocoadocs.org/docsets/Trackers)
 ![Swift](https://img.shields.io/badge/%20in-swift%203.0-orange.svg)
 
-## Description
+## Story
 
-**Trackers** description.
+- Make it easy to add logging, analytics to ViewController appearances
 
 ## Usage
 
+Simply call `track` at app launch
+
 ```swift
-<API>
+track(ListController.self) {
+  // list controller has appeared
+}
+
+track(DetailController.self) {
+  // detail controller has appeared
+}
 ```
 
 ## Installation
