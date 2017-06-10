@@ -10,6 +10,7 @@
 ## Story
 
 - Make it easy to add logging, analytics to ViewController appearances
+- See and modify all your trackings in one place
 
 ## Usage
 
