@@ -25,7 +25,7 @@ track(DetailController.self) {
 }
 
 track(CouponController.self) { controller in
-	print("coupon controller has appeared with code \(controller.coupon.code)")
+  print("coupon controller has appeared with code \(controller.coupon.code)")
 }
 ```
 
